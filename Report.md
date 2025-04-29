@@ -49,6 +49,8 @@ The **monitor** is responsible for:
 - Sending transactions to the scoreboard for checking.
 - Non-intrusively capturing data (does not drive any signals).
 
+  ![UVM Hierarchy Screenshot](images/Screenshot 2025-04-28 213828.png)
+
 ## 5. Conclusion
 
 Through this exercise, I:
