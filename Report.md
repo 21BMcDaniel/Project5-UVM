@@ -39,6 +39,19 @@ The UVM hierarchy created during simulation includes:
         - **m_sequencer** (generates transactions)
         - **m_monitor** (captures DUT outputs and forwards them to scoreboard)
       - **m_scoreboard** (checks correctness of memory read/write)
+     
+  - The testbench uses a flat hierarchy with a top module that instantiates:
+     - The design under test (DUT)
+     - The DUT interface (dut_if1)
+     - A Monitor that observes the interface signals
+     - A Scoreboard that checks data correctness
+    ```scss
+    top
+    ├── dut (DUT)
+    ├── dut_if1 (Interface)
+    ├── monitor (connected to dut_if1 signals)
+    └── scoreboard (checks data)
+    ```
 
 ## 4. Monitor Functionality
 
